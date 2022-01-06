@@ -1,10 +1,5 @@
-using Microsoft.Azure.WebJobs;
-using Microsoft.Azure.WebJobs.Extensions.Kafka;
-using Microsoft.Extensions.Configuration;
-using Microsoft.Extensions.DependencyInjection;
-using Microsoft.Extensions.Hosting;
+
 using Microsoft.Extensions.Logging;
-using System.Threading.Tasks;
 
 namespace FunctionAppDotnetOutProc
 {
