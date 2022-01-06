@@ -1,7 +1,7 @@
 {
     "IsEncrypted": false,
   "Values": {
-    "AzureWebJobsStorage": "",
+    "AzureWebJobsStorage": "UseDevelopmentStorage=true",
     "FUNCTIONS_WORKER_RUNTIME": "dotnet-isolated",
     "BrokerList": "shivamehub.servicebus.windows.net:9093",
     "KafkaPassword": "Endpoint=sb://shivamehub.servicebus.windows.net/;SharedAccessKeyName=topichub;SharedAccessKey=Mv4McaLhz6na6Tz//OhH9rRKRR+rxzi0W5epTN0KX8I=;EntityPath=topichub",
