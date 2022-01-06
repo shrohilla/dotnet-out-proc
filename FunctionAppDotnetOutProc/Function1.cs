@@ -15,7 +15,7 @@ namespace FunctionAppDotnetOutProc
         // For EventHubs
         // "BrokerList": "{EVENT_HUBS_NAMESPACE}.servicebus.windows.net:9093"
         // "KafkaPassword":"{EVENT_HUBS_CONNECTION_STRING}
-        [FunctionName("Function1")]
+        [Function("Function1")]
         public void Run(
             [KafkaTrigger("BrokerList",
                           "topic",
@@ -23,12 +23,12 @@ namespace FunctionAppDotnetOutProc
                           Password = "%KafkaPassword%",
                           Protocol = BrokerProtocol.SaslSsl,
                           AuthenticationMode = BrokerAuthenticationMode.Plain,
-                          ConsumerGroup = "$Default")] KafkaEventData<string>[] events,
+                          ConsumerGroup = "$Default")] string[] events,
             ILogger log)
         {
-            foreach (KafkaEventData<string> eventData in events)
+            foreach (string eventData in events)
             {
-                log.LogInformation($"C# Kafka trigger function processed a message: {eventData.Value}");
+                log.LogInformation($"C# Kafka trigger function processed a message: {eventData}");
             }
         }
     }

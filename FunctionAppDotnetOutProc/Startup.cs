@@ -13,27 +13,18 @@ namespace FunctionAppDotnetOutProc
     {
         public static async Task Main()
         {
-            var builder = new HostBuilder()
-               .UseEnvironment("Development")
-               .ConfigureWebJobs(b =>
-               {
-                   b.AddKafka();
-               })
-               .ConfigureAppConfiguration(b =>
-               {
-               })
-               .ConfigureLogging((context, b) =>
-               {
-                   b.SetMinimumLevel(LogLevel.Debug);
-                   b.AddConsole();
-               })
-               .ConfigureServices(services =>
-               {
-                   services.AddSingleton<Function1>();
-               })
-               .UseConsoleLifetime();
+            var host = new HostBuilder()
+    .ConfigureFunctionsWorkerDefaults()
+    .ConfigureServices(s =>
+    {
+        s.AddSingleton<Function1>();
+    })
+    .UseConsoleLifetime()
+    .Build();
 
-            var host = builder.Build();
+           
+
+            
             using (host)
             {
                 await host.RunAsync();
