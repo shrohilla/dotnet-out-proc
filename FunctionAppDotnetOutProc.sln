@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.0.32014.148
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FunctionAppDotnetOutProc", "FunctionAppDotnetOutProc\FunctionAppDotnetOutProc.csproj", "{75E291C4-2B4A-4E52-A6FF-4E289D4E19ED}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{75E291C4-2B4A-4E52-A6FF-4E289D4E19ED}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{75E291C4-2B4A-4E52-A6FF-4E289D4E19ED}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{75E291C4-2B4A-4E52-A6FF-4E289D4E19ED}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{75E291C4-2B4A-4E52-A6FF-4E289D4E19ED}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {9D464275-8E97-4D9C-BEB5-7D3D41EA1FFC}
+	EndGlobalSection
+EndGlobal
