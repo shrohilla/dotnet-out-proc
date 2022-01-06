@@ -24,11 +24,12 @@ namespace FunctionAppDotnetOutProc
                           Protocol = BrokerProtocol.SaslSsl,
                           AuthenticationMode = BrokerAuthenticationMode.Plain,
                           ConsumerGroup = "$Default")] string[] events,
-            ILogger log)
+            FunctionContext context)
         {
+            var logger = context.GetLogger("Function1");
             foreach (string eventData in events)
             {
-                log.LogInformation($"C# Kafka trigger function processed a message: {eventData}");
+                logger.LogInformation($"C# Kafka trigger function processed a message: {eventData}");
             }
         }
     }
